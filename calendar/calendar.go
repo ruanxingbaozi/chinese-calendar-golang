@@ -11,7 +11,7 @@ import (
 
 // Calendar 日历
 type Calendar struct {
-	t      *time.Time
+	Time   *time.Time
 	Solar  *solar.Solar
 	Lunar  *lunar.Lunar
 	Ganzhi *ganzhi.Ganzhi
@@ -24,7 +24,7 @@ func ByTimestamp(ts int64) *Calendar {
 	lc := lunar.NewLunar(&t)
 	gz := ganzhi.NewGanzhi(&t)
 	return &Calendar{
-		t:      &t,
+		Time:   &t,
 		Solar:  sc,
 		Lunar:  lc,
 		Ganzhi: gz,

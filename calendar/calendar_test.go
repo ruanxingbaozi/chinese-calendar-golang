@@ -37,13 +37,13 @@ func TestBySolar(t *testing.T) {
 		want *Calendar
 	}{
 		{"test_1", args{2018, 3, 21, 0, 0, 26}, &Calendar{
-			t:      &t1,
+			Time:   &t1,
 			Solar:  solar.NewSolar(&t1),
 			Lunar:  lunar.NewLunar(&t1),
 			Ganzhi: ganzhi.NewGanzhi(&t1),
 		}},
 		{"test_2", args{2018, 3, 21, 0, 15, 26}, &Calendar{
-			t:      &t2,
+			Time:   &t2,
 			Solar:  solar.NewSolar(&t2),
 			Lunar:  lunar.NewLunar(&t2),
 			Ganzhi: ganzhi.NewGanzhi(&t2),
@@ -76,13 +76,13 @@ func TestByLunar(t *testing.T) {
 		want *Calendar
 	}{
 		{"test_1", args{2017, 6, 24, 12, 0, 0, true}, &Calendar{
-			t:      &t1,
+			Time:   &t1,
 			Solar:  solar.NewSolar(&t1),
 			Lunar:  lunar.NewLunar(&t1),
 			Ganzhi: ganzhi.NewGanzhi(&t1),
 		}},
 		{"test_2", args{2018, 2, 14, 23, 11, 30, false}, &Calendar{
-			t:      &t2,
+			Time:   &t2,
 			Solar:  solar.NewSolar(&t2),
 			Lunar:  lunar.NewLunar(&t2),
 			Ganzhi: ganzhi.NewGanzhi(&t2),
@@ -109,13 +109,13 @@ func TestByTimestamp(t *testing.T) {
 		want *Calendar
 	}{
 		{"test_1", args{t1.Unix()}, &Calendar{
-			t:      &t1,
+			Time:   &t1,
 			Solar:  solar.NewSolar(&t1),
 			Lunar:  lunar.NewLunar(&t1),
 			Ganzhi: ganzhi.NewGanzhi(&t1),
 		}},
 		{"test_2", args{t2.Unix()}, &Calendar{
-			t:      &t2,
+			Time:   &t2,
 			Solar:  solar.NewSolar(&t2),
 			Lunar:  lunar.NewLunar(&t2),
 			Ganzhi: ganzhi.NewGanzhi(&t2),
